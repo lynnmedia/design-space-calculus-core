@@ -1,0 +1,6 @@
+cff-version: 1.2.0
+message: "Cite the exact versioned public release and its limitations."
+title: "Design-Space Calculus Core RC1 (bounded developer preview)"
+authors:
+  - name: "Lynn Walker"
+version: "0.2.0rc1"

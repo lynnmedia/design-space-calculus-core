@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools==84.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "design-space-calculus"
+version = "0.2.0rc1"
+description = "Bounded DSC Core RC1 representation, validation, and novum-dsc/0.1 importer preview"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = "LicenseRef-SEE-LICENSE-MAP"
+authors = [{name = "Lynn Walker"}]
+dependencies = []
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+]
+
+[project.scripts]
+dsc = "stable_cli:main"
+dsc-plc = "dsc_plc:main"
+
+[tool.setuptools]
+py-modules = ["cli_core", "dsc_compiler", "dsc_ir", "dsc_plc", "novum_contract", "stable_cli", "workspace_core"]
+package-dir = {"" = "src"}
+include-package-data = false
+license-files = []
+
+[tool.setuptools.data-files]
+"share/design-space-calculus" = ["RELEASE-STATUS.md", "CITATION.cff", "LICENSE-MAP.md", "README.md", "SECURITY.md"]
+"share/design-space-calculus/docs" = ["docs/CITATION.md", "docs/QUICKSTART.md", "docs/REFERENCE.md", "docs/SCOPE.md", "docs/SPECIFICATION-v0.1.md", "docs/VALIDATION.md"]
+"share/design-space-calculus/examples" = ["examples/failure.dsc", "examples/novum-success.json", "examples/success.dsc"]
+"share/design-space-calculus/tests" = ["tests/test_candidate.py"]
+"share/design-space-calculus/LICENSES" = ["LICENSES/Apache-2.0.txt", "LICENSES/CC-BY-4.0.txt"]

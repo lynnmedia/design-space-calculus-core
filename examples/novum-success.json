@@ -1,0 +1,138 @@
+{
+  "contract": "novum-dsc/0.1",
+  "entities": [
+    {
+      "body": [
+        "primary need"
+      ],
+      "id": "N1",
+      "kind": "need"
+    },
+    {
+      "body": [
+        "secondary need"
+      ],
+      "id": "N2",
+      "kind": "need"
+    },
+    {
+      "body": [],
+      "id": "F1",
+      "kind": "function"
+    },
+    {
+      "body": [
+        "hard"
+      ],
+      "id": "C1",
+      "kind": "constraint"
+    },
+    {
+      "body": [
+        "tension"
+      ],
+      "id": "T1",
+      "kind": "tension"
+    },
+    {
+      "body": [
+        "mechanism"
+      ],
+      "id": "M1",
+      "kind": "mechanism"
+    },
+    {
+      "body": [
+        "observation"
+      ],
+      "id": "E1",
+      "kind": "evidence"
+    },
+    {
+      "body": [
+        "claim"
+      ],
+      "id": "CL1",
+      "kind": "claim"
+    },
+    {
+      "body": [
+        "fixture"
+      ],
+      "id": "TEST1",
+      "kind": "test"
+    }
+  ],
+  "evidence": [
+    {
+      "body": [
+        "observation"
+      ],
+      "contradicts": [],
+      "id": "E1",
+      "supports": [
+        "CL1"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "description": "mechanism",
+      "id": "M1",
+      "satisfies": [
+        "F1"
+      ]
+    }
+  ],
+  "obligations": [
+    {
+      "dependents": [],
+      "id": "U1",
+      "kind": "unknown",
+      "status": "active"
+    }
+  ],
+  "problem": {
+    "constraints": [
+      "C1"
+    ],
+    "functions": [
+      "F1"
+    ],
+    "goals": [],
+    "name": "SyntheticSort",
+    "needs": [
+      "N1",
+      "N2"
+    ],
+    "novum_version": "example-only"
+  },
+  "provenance": {
+    "entity_count": 9,
+    "relation_count": 3,
+    "source_file": "synthetic-novum.json"
+  },
+  "relations": [
+    {
+      "relation": "satisfies",
+      "source": "M1",
+      "target": "F1"
+    },
+    {
+      "relation": "supports",
+      "source": "E1",
+      "target": "CL1"
+    },
+    {
+      "relation": "requires",
+      "source": "N1",
+      "target": "F1"
+    }
+  ],
+  "tensions": [
+    {
+      "description": "tension",
+      "id": "T1"
+    }
+  ]
+}
